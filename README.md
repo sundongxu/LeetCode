@@ -64,7 +64,7 @@
 ### Day4
 ---
 **2018-03-27, Hot.**
-** 8 Problems Finished.**
+**8 Problems Finished.**
 
 |No|Title|Difficulty|
 |:--:|:----:|:----------:|
@@ -80,7 +80,7 @@
 ### Day5
 ---
 **2018-03-28, Too Hot.**
-** 8 Problems Finished.**
+**8 Problems Finished.**
 
 |No|Title|Difficulty|
 |:--:|:----:|:----------:|
