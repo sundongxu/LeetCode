@@ -4,6 +4,8 @@
         "system_error": "cpp",
         "type_traits": "cpp",
         "iostream": "cpp",
-        "limits": "cpp"
+        "limits": "cpp",
+        "*.tcc": "cpp",
+        "initializer_list": "cpp"
     }
 }

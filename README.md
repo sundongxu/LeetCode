@@ -3,8 +3,9 @@
 
 ## 1st Round
 
-### Day1, 2018-03-23, Sunny
+### Day1
 ---
+**2018-03-23, Sunny.**
 **7 Problems Finished.**
 
 |No|Title|Difficulty|
@@ -17,8 +18,9 @@
 |39|[**Combination Sum(DFS)**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Medium/39-CombinationSum.cc)|Medium|
 |593|[**Valid Square**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Medium/593-ValidSquare.cc)|Medium|
 
-### Day2, 2018-03-24, Wild
+### Day2
 ---
+**2018-03-24, Wild.**
 **10 Problems Finished.**
 
 |No|Title|Difficulty|
@@ -29,15 +31,16 @@
 |26|[**Remove Duplicates From Sorted Array**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Easy/26-RemoveDuplicatesFromSortedArray.cc)|Easy|
 |27|[**Remove Element**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Easy/27-RemoveElement.cc)|Easy|
 |28|[**Implement strStr**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Easy/28-ImplementStrstr.cc)|Easy|
-|80|[**Remove Duplicates From Sorted Array(2)**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Easy/80-RemoveDuplicatesFromSortedArray2.cc)|Medium|
+|80|[**Remove Duplicates From Sorted Array(2)**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Medium/80-RemoveDuplicatesFromSortedArray2.cc)|Medium|
 |88|[**Merge Sorted Array**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Easy/88-MergeSortedArray.cc)|Easy|
 |168|[**Excel Sheet Column Title**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Easy/168-ExcelSheetColumnTitle.cc)|Easy|
 |171|[**Exvel Sheet Column Number**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Easy/171-ExcelSheetColumnNumber.cc)|Easy|
 
-**some tip**: trick_sync_with_stdio.cc
+**some tip**: [**trick_sync_with_stdio.cc**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/trick_sync_with_stdio.cc)
 
-### Day3, 2018-03-26, Hot
+### Day3
 ---
+**2018-03-26, Hot.**
 **15 Problems Finished.**
 
 |No|Title|Difficulty|
@@ -47,7 +50,7 @@
 |35|[**Search Insert Position**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Easy/35-SearchInsertPosition.cc)|Easy|
 |38|[**Count And Say**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Easy/38-CountAndSay.cc)|Easy|
 |50|[**Pow**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Medium/50-Pow.cc)|Medium|
-|53|[**Maximum SubArray**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Easy/53-MaximunSubArray.cc)| Easy|
+|53|[**Maximum SubArray**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Easy/53-MaximumSubArray.cc)| Easy|
 |58|[**Length Of Last Word**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Easy/58-LengthOfLastWord.cc)|Easy|
 |64|[**Minimum Path Sum**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Medium/64-MinimumPathSum.cc)|Medium|
 |66|[**Plus One**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Easy/66-PlusOne.cc)|Easy|
@@ -56,4 +59,4 @@
 |70|[**Climbing Stairs**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Easy/70-ClimbingStairs.cc)|Easy|
 |112|[**Path Sum**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Easy/112-PathSum.cc)|Easy|
 |113|[**Path Sum(2)**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Medium/113-PathSum2.cc)|Medium|
-|120|[**Triange**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Medium/120-Triange.cc)|Medium|
+|120|[**Triange**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Medium/120-Triangle.cc)|Medium|
