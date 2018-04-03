@@ -6,6 +6,7 @@
         "iostream": "cpp",
         "limits": "cpp",
         "*.tcc": "cpp",
-        "initializer_list": "cpp"
+        "initializer_list": "cpp",
+        "cstdlib": "cpp"
     }
 }
