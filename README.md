@@ -92,3 +92,56 @@
 |114|[**Flatten Binary Tree To LinkedList**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Medium/114-FlattenBinaryTreeToLinkedList.cc)|Medium|
 |118|[**Pascal Triangle**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Easy/118-PascalTriangle.cc)|Easy|
 |617|[**Merge Two Binary Trees**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Easy/617-MergeTwoBinaryTrees.cc)|Easy|
+
+### Day6
+---
+**2018-04-01, Wild.**
+**11 Problems Finished.**
+
+|No|Title|Difficulty|
+|:--:|:----:|:----------:|
+|15|[**3 Sum**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Medium/15-3Sum.cc)|Medium|
+|16|[**3 Sum Closest**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Medium/16-3SumClosest.cc)|Medium|
+|18|[**4 Sum**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Medium/18-4Sum.cc)|Medium|
+|24|[**Swap Nodes In Pairs**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Medium/24-SwapNodesInPairs.cc)|Medium|
+|25|[**Reverse Nodes In K-Group**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Hard/25-ReverseNodesInKGroup.cc)|Hard|
+|61|[**Rotate List**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Medium/61-RotateList.cc)|Medium|
+|86|[**Partition List**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Medium/86-PartitionList.cc)|Medium|
+|92|[**Reverse Linked List(2)**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Medium/92-ReverseLinkedList2.cc)|Medium|
+|147|[**Insertion Sort List**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Medium/147-InsertionSortList.cc)|Medium|
+|148|[**Sort List**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Medium/148-SortList.cc)|Medium|
+|206|[**Reverse Linked List**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Easy/206-ReverseLinkedList.cc)|Easy|
+
+### Day7
+---
+**2018-04-02, Wild.**
+**12 Problems Finished.**
+
+|No|Title|Difficulty|
+|:--:|:----:|:----------:|
+|121|[**Best Time To Buy And Sell Stock**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Easy/121-BestTimeToBuyAndSellStock.cc)|Easy|
+|122|[**Best Time To Buy And Sell Stock(2)**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Easy/122-BestTimeToBuyAndSellStock2.cc)|Easy|
+|123|[**Best Time To Buy And Sell Stock(3)**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Hard/123-BestTimeToBuyAndSellStock3.cc)|Hard|
+|125|[**Valid Palindrome**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Easy/125-ValidPalindrome.cc)|Easy|
+|136|[**Single Number**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Easy/136-SingleNumber.cc)|Easy|
+|137|[**SingleNumber2**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Medium/137-SingleNumber2.cc)|Medium|
+|141|[**Linked List Cycle**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Easy/141-LinkedListCycle.cc)|Easy|
+|142|[**Linked List Cycle(2)**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Medium/142-LinkedListCycle2.cc)|Medium|
+|155|[**Min Stack**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Easy/155-MinStack.cc)|Easy|
+|159|[**Majority Element**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Easy/159-MajorityElement.cc)|Easy|
+|160|[**Intersection Of Two Linked List**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Easy/160-IntersectionOfTwoLinkedList.cc)|Easy|
+|172|[**Factorial Trailing Zeroes**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Easy/172-FactorialTrailingZeroes.cc)|Easy|
+
+### Day8
+---
+**2018-04-03, Cool.**
+**6 Problems Finished.**
+
+|No|Title|Difficulty|
+|:--:|:----:|:----------:|
+|189|[**Rotate Array**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Easy/189-RotateArray.cc)|Easy|
+|190|[**Reverse Bits**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Easy/190-ReverseBits.cc)|Easy|
+|191|[**Number Of One Bits**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Easy/191-NumberOfOneBits.cc)|Easy|
+|198|[**House Robber**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Easy/198-HouseRobber.cc)|Easy|
+|213|[**House Robber(2)**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Medium/213-HouseRobber2.cc)|Medium|
+|231|[**Power Of Two**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Easy/231-PowerOfTwo.cc)|Easy|

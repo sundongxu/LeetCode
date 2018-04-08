@@ -7,6 +7,7 @@
         "limits": "cpp",
         "*.tcc": "cpp",
         "initializer_list": "cpp",
-        "cstdlib": "cpp"
+        "cstdlib": "cpp",
+        "utility": "cpp"
     }
 }
