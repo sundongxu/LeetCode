@@ -8,6 +8,7 @@
         "*.tcc": "cpp",
         "initializer_list": "cpp",
         "cstdlib": "cpp",
-        "utility": "cpp"
+        "utility": "cpp",
+        "ostream": "cpp"
     }
 }
