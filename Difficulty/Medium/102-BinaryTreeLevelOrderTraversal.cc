@@ -61,7 +61,43 @@ class Solution
                     next.push(node->right);
             }
             result.push_back(level);
-            swap(next, cur);
+            swap(next, cur); // cur与next互换元素，cur又非空啦
+        }
+        return result;
+    }
+};
+
+// discuss简洁版
+
+class Solution
+{
+  public:
+    vector<vector<int>> zigzagLevelOrder(TreeNode *root)
+    {
+        vector<vector<int>> result;
+        if (!root)
+            return result;
+        deque<TreeNode *> tree; // 双端队列
+        tree.push_back(root);
+        int flag = 0;
+        while (!tree.empty())
+        {
+            int count = tree.size();
+            vector<int> level;
+            while (count-- > 0)
+            {
+                TreeNode *cur = tree.front();
+                tree.pop_front();
+                level.push_back(cur->val);
+                if (cur->left)
+                    tree.push_back(cur->left);
+                if (cur->right)
+                    tree.push_back(cur->right);
+            }
+            if (flag & 1) // 得到最后1 bit的值
+                reverse(level.begin(), level.end());
+            result.push_back(level);
+            flag++;
         }
         return result;
     }
