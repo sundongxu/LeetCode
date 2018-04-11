@@ -145,3 +145,39 @@
 |198|[**House Robber**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Easy/198-HouseRobber.cc)|Easy|
 |213|[**House Robber(2)**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Medium/213-HouseRobber2.cc)|Medium|
 |231|[**Power Of Two**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Easy/231-PowerOfTwo.cc)|Easy|
+
+### Day9
+---
+**2018-04-09, Sunny.**
+**14 Problems Finished.**
+
+|No|Title|Difficulty|
+|:--:|:----:|:----------:|
+|3|[**Longest Substring Without Repeating Characters**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Medium/3-LongestSubstringWithoutRepeatingCharacters.cc)|Medium|
+|5|[**Longest Palindromic Substring**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Medium/5-LongestPalindromicSubstring.cc)|Medium|
+|6|[**Zigzag Conversion**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Medium/6-ZigZagConversion.cc)|Medium|
+|17|[**Letter Combination Of A Phone Number**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Medium/17-LetterCombinationOfAPhoneNumber.cc)|Medium|
+|19|[**Remove Nth Node From End of List**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Medium/19-RemoveNthNodeFromEndOfList.cc)|Medium|
+|22|[**Generate Parentheses**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Medium/22-GenerateParentheses.cc)|Medium|
+|29|[**Divide Two Integers**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Medium/29-DivideTwoIntegers.cc)|Medium|
+|31|[**Next Permutation**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Medium/31-NextPermutation.cc)|Medium|
+|103|[**Binary Tree Zigzag Level Order Traversal**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Medium/103-BinaryTreeZigzagLevelOrderTraversal.cc)|Medium|
+|116|[**Populating Next Right Pointers In Each Node**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Medium/116-PoplulatingNextRightPointersInEachNode.cc)|Medium|
+|117|[**Populating Next Right Pointers In Each Node(2)**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Medium/117-PopulatingNextRightPointersInEachNode2.cc)|Medium|
+|192|[**Word Frequecy**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Medium/192-WordFrequency.cc)|Medium|
+|215|[**Kth Largest Element In An Array**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Medium/215-KthLargestElementInAnArray.cc)|Medium|
+|347|[**Top K Frequent Elements**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Medium/347-TopKFrequentElements.cc)|Medium|
+
+### Day10
+---
+**2018-04-10, Hot.**
+**6 Problems Finished.**
+
+|No|Title|Difficulty|
+|:--:|:----:|:----------:|
+|10|[**Regular Expression Matching**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Hard/10-RegularExpressionMatching.cc)|Hard|
+|44|[**Wildcard Matching**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Hard/44-WildcardMatching.cc)|Hard|
+|371|[**Sum Of Two Integers**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Easy/371-SumOfTwoIntegers.cc)|Easy|
+|434|[**Number Of Segments In A String**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Easy/434-NumberOfSegmentsInAString.cc)|Easy|
+|459|[**Repeated Substring Pattern**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Easy/459-RepeatedSubstringPattern.cc)|Easy|
+|686|[**Repeated String Match**](https://github.com/sundongxu/LeetCode/blob/master/Difficulty/Easy/686-RepeatedStringMatch.cc)|Easy|
