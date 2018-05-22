@@ -20,6 +20,10 @@
         "vector": "cpp",
         "queue": "cpp",
         "iosfwd": "cpp",
-        "__locale": "cpp"
+        "__locale": "cpp",
+        "__config": "cpp",
+        "__nullptr": "cpp",
+        "bitset": "cpp",
+        "memory": "cpp"
     }
 }
