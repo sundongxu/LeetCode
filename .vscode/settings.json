@@ -24,6 +24,11 @@
         "__config": "cpp",
         "__nullptr": "cpp",
         "bitset": "cpp",
-        "memory": "cpp"
+        "memory": "cpp",
+        "stack": "cpp",
+        "__hash_table": "cpp",
+        "__tree": "cpp",
+        "set": "cpp",
+        "unordered_set": "cpp"
     }
 }
