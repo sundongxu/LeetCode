@@ -62,25 +62,6 @@ class Solution
 class Solution
 {
   public:
-    // bool isSymmetric(TreeNode *root)
-    // {
-    //     if (!root)
-    //         return true;
-    //     return isSymmetric(root->left, root->right);
-    // }
-
-    // bool isSymmetric(TreeNode *p, TreeNode *q)
-    // {
-    //     if (!p && !q) // 左右子树全为空，当然对称
-    //         return true;
-    //     if (!p || !q) // 左右子树仅有一个为空，当然不对称
-    //         return false;
-    //     // 下面这个参数传递很巧妙啦：
-    //     // 左子树的左子树和右子树的右子树对不对称
-    //     // 左子树的右子树和右子树的左子树对不对称
-    //     return p->val == q->val && isSymmetric(p->left, q->right) && isSymmetric(p->right, q->left);
-    // }
-
     bool isSymmetric(TreeNode *root)
     {
         if (!root)
@@ -108,6 +89,7 @@ class Solution
             s.push(p->right);
             s.push(q->left);
         }
+        // 只有栈空了，即上面循环结束，才可能是对称的
         // 呐，我说了，活到现在的都是人才，一定对称
         return true;
     }

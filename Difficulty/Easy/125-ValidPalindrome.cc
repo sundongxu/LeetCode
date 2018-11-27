@@ -25,3 +25,57 @@ class Solution
         return true;
     }
 };
+
+class Solution
+{
+  public:
+    bool isPalindrome(string s)
+    {
+        if(s.empty())
+            return true;
+        int l = 0, r = s.size() - 1;
+        while(l < r)
+        {
+            if(!isalpha(s[l]) && !isdigit(s[l]))
+            {
+                l++;
+                continue;
+            }
+            if(!isalpha(s[r]) && !isdigit(s[r]))
+            {
+                r++;
+                continue;
+            }
+            if((s[l] | 0x20) != (s[r] | 0x20))
+                return false;
+            l++;
+            r--;
+        }
+        return true;
+    }
+};
+
+// STL
+class Solution
+{
+  public:
+    static bool isspace(char c)
+    {
+        if(c == ' ') 
+            return true;
+        else if(c >= 'a' && c <= 'z')
+            return false;
+        else if(c >= '0' && c <= '9')
+            return false;
+        return true;
+    }
+
+    bool isPalindrome(string s)
+    {
+        transform(s.begin(), s.end(), s.begin(), ::tolower());
+        s.erase(remove_if(s.begin(), s.end(), isspace), s.end());
+        string t = s;
+        reverse(t.begin(), t.end());
+        return t == s;
+    }
+};
