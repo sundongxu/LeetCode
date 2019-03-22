@@ -42,7 +42,7 @@ class Solution
     vector<vector<int>> levelOrder(TreeNode *root)
     {
         vector<vector<int>> result;
-        queue<TreeNode *> cur, next; // 注意哦，用的队列
+        queue<TreeNode *> cur, next; // cur存储当前层的全部节点，next存储下一层的全部节点
         if (!root)
             return result;
         else

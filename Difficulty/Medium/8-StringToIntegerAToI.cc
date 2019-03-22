@@ -1,5 +1,5 @@
 /*
-    本地难点在于分析str的输入用例，如何考虑全面：
+    本题难点在于分析str的输入用例，如何考虑全面：
     （1）丢弃前面出现的所有空格符" "，直到第一个不是空格的字符为止
     （2）从当前字符是否为‘+’和'-'，确定结果的正负，但是只需要一个+/-，连续出现两个，如++1，就是无效输入
     （3）从符号后面连续出现的全部数字都考虑进来，直到第一个不是数字的字符为止，如+31231da1s5d仍是有效输入，只是从d开始后面的字符全都要丢弃
@@ -8,10 +8,6 @@
     返回值，分如下几种情况：
     （1）无效输入用例，即无效转换，返回0
     （2）转换后的int值溢出，即为正数时>2147483647，为负数时<-2147483648，则返回INT_MAX(2147483647)或INT_MIN(-2147483648)
-
-
-If the first sequence of non-whitespace characters in str is not a valid integral number, or if no such sequence exists because either str is empty or it contains only whitespace characters, no conversion is performed.
-
 */
 
 class Solution

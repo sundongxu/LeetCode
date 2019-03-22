@@ -48,10 +48,10 @@ class Solution
 
         unordered_map<const UndirectedGraphNode *, UndirectedGraphNode *> copy;
 
-        // 队列里面的每个结点都已经copy了自身， 但是其邻居还未拷贝
+        // 队列里面的每个结点都已经copy了自身（空间和关键字）， 但是其邻居数组还未拷贝
         queue<const UndirectedGraphNode *> q;
         copy[node] = new UndirectedGraphNode(node->label);
-        q.push(node);
+        q.push(node); // 把原始节点入队，用来找到各个邻居节点
 
         while (!q.empty())
         {
@@ -63,9 +63,8 @@ class Solution
                     copy[cur]->neighbors.push_back(copy[nbr]); // 不用拷贝结点，只用拷贝邻居关系，cur的邻居是nbr，则copy[cur]的邻居为copy[nbr]
                 else                                           // cur的相邻结点未在map中，不仅要拷贝邻居关系，还要先将该结点拷贝至copy中
                 {
-                    UndirectedGraphNode *new_node = new UndirectedGraphNode(nbr->label);
-                    copy[nbr] = new_node;
-                    copy[cur]->neighbors.push_back(new_node);
+                    copy[nbr] = new UndirectedGraphNode(nbr->label);
+                    copy[cur]->neighbors.push_back(copy[nbr]);
                     q.push(nbr);
                 }
             }

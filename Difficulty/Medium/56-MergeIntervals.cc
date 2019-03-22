@@ -19,29 +19,31 @@ class Solution
     }
 
   private:
-    vector<Interval> insert(vector<Interval> &intervals, Interval newInterval)
+    void insert(vector<Interval> &result, Interval newInterval)
     {
-        auto it = intervals.begin();
-        while (it != intervals.end())
+        auto it = result.begin();
+        while (it != result.end())
         {
             if (newInterval.end < it->start)
             {
-                intervals.insert(it, newInterval);
-                return intervals;
+                // 新interval完全在当前interval的左边，应将新interval插入在当前interval之前位置
+                result.insert(it, newInterval);
+                return;
             }
             else if (newInterval.start > it->end)
             {
+                // 新interval完全在当前Interval的右边
                 it++;
                 continue;
             }
             else
             {
+                // 两者有重叠部分，此时需要合并时段
                 newInterval.start = min(newInterval.start, it->start);
                 newInterval.end = max(newInterval.end, it->end);
-                it = intervals.erase(it);
+                it = result.erase(it);
             }
         }
-        intervals.insert(intervals.end(), newInterval);
-        return intervals;
+        result.insert(result.end(), newInterval);
     }
 };

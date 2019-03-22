@@ -39,6 +39,4 @@ class Solution
         }
         return result;
     }
-
-    vector
 };

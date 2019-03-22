@@ -8,29 +8,29 @@
 class Solution
 {
   public:
-    vector<vector<int>> subsets(vector<int> &S)
+    vector<vector<int>> dfs(vector<int> &nums)
     {
-        sort(S.begin(), S.end()); // 输出有序
+        sort(nums.begin(), nums.end()); // 输出有序
         vector<vector<int>> result;
         vector<int> path;
-        subsets(S, path, 0, result);
+        dfs(nums, path, 0, result);
         return result;
     }
 
   private:
-    static void subsets(const vector<int> &S, vector<int> &path, int step,
+    static void dfs(const vector<int> &nums, vector<int> &path, int cur,
                         vector<vector<int>> &result)
     {
-        if (step == S.size())
+        if (cur == nums.size())
         {
             result.push_back(path);
             return;
         }
-        // ̼不选 S[step]
-        subsets(S, path, step + 1, result);
-        // 选 S[step]
-        path.push_back(S[step]);
-        subsets(S, path, step + 1, result);
+        // ̼不选 nums[cur]
+        dfs(nums, path, cur + 1, result);
+        // 选 nums[cur]
+        path.push_back(nums[cur]);
+        dfs(nums, path, cur + 1, result);
         path.pop_back();
     }
 };
@@ -40,36 +40,36 @@ class Solution
 class Solution
 {
   public:
-    vector<vector<int>> subsets(vector<int> &S)
+    vector<vector<int>> dfs(vector<int> &nums)
     {
-        sort(S.begin(), S.end()); // 输出有序
+        sort(nums.begin(), nums.end()); // 输出有序
         vector<vector<int>> result;
-        vector<bool> selected(S.size(), false);
-        subsets(S, selected, 0, result);
+        vector<bool> selected(nums.size(), false);
+        dfs(nums, selected, 0, result);
         return result;
     }
 
   private:
-    static void subsets(const vector<int> &S, vector<bool> &selected, int step,
+    static void dfs(const vector<int> &nums, vector<bool> &selected, int cur,
                         vector<vector<int>> &result)
     {
-        if (step == S.size())
+        if (cur == nums.size())
         {
             vector<int> subset;
-            for (int i = 0; i < S.size(); i++)
+            for (int i = 0; i < nums.size(); i++)
             {
                 if (selected[i])
-                    subset.push_back(S[i]);
+                    subset.push_back(nums[i]);
             }
             result.push_back(subset);
             return;
         }
-        // ̼不选 S[step]
-        selected[step] = false;
-        subsets(S, selected, step + 1, result);
-        // 选 S[step]
-        selected[step] = true;
-        subsets(S, selected, step + 1, result);
+        // ̼不选 nums[cur]
+        selected[cur] = false;
+        dfs(nums, selected, cur + 1, result);
+        // 选 nums[cur]
+        selected[cur] = true;
+        dfs(nums, selected, cur + 1, result);
     }
 };
 
@@ -78,11 +78,11 @@ class Solution
 class Solution
 {
   public:
-    vector<vector<int>> subsets(vector<int> &S)
+    vector<vector<int>> dfs(vector<int> &nums)
     {
-        sort(S.begin(), S.end());
+        sort(nums.begin(), nums.end());
         vector<vector<int>> result(1); // 初始化有一个空的vector:[]
-        for (auto elem : S)
+        for (auto elem : nums)
         {
             result.reserve(result.size() * 2); // 增加capacity不改变size
             auto half = result.begin() + result.size();
@@ -102,18 +102,18 @@ class Solution
 class Solution
 {
   public:
-    vector<vector<int>> subsets(vector<int> &S)
+    vector<vector<int>> dfs(vector<int> &nums)
     {
-        sort(S.begin(), S.end());
+        sort(nums.begin(), nums.end());
         vector<vector<int>> result;
-        const size_t n = S.size();
+        const size_t n = nums.size();
         vector<int> v;
         for (size_t i = 0; i < 1 << n; i++)
         {
             for (size_t j = 0; j < n; j++)
             {
                 if (i & 1 << j)
-                    v.push_back(S[j]);
+                    v.push_back(nums[j]);
             }
             result.push_back(v);
             v.clear();

@@ -13,14 +13,14 @@ class Solution
         if (obstacleGrid[0][0] || obstacleGrid[m - 1][n - 1]) // 边界条件，起点和终点都有障碍物，不可到达
             return 0;
 
-        vector<int> f(n, 0);
+        vector<long> f(n, 0);
         f[0] = 1;
 
         for (int i = 0; i < m; i++)
         {
-            f[0] = f[0] == 0 ? 0 : (obstacleGrid[i][0] ? 0 : 1);
+            f[0] = f[0] == 0 ? 0 : (obstacleGrid[i][0] ? 0 : 1);  // 第一列，总是判断当前行元素是否为障碍物，若有则第一列该元素之后全部为0（不可达）
             for (int j = 1; j < n; j++)
-                f[j] = obstacleGrid[i][j] ? 0 : (f[j] + f[j - 1]);
+                f[j] = obstacleGrid[i][j] ? 0 : (f[j] + f[j - 1]); // f[j]为往下走到[i,j]，对应点为[i-1,j]; f[j-1]为往右走，对应点为[i,j-1]
         }
         return f[n - 1];
     }

@@ -14,7 +14,7 @@ class Solution
         if (head == nullptr)
             return nullptr;
 
-        // 在原结点下一个位置接上该结点拷贝
+        // 构造每个节点的拷贝，分别插入到原节点之后，此时链表含两倍节点
         for (RandomListNode *cur = head; cur != nullptr;)
         {
             RandomListNode *node = new RandomListNode(cur->label);
@@ -23,14 +23,14 @@ class Solution
             cur = node->next;
         }
 
-        // 为拷贝结点构造random指针
-        // 注意到：原结点random指向的结点的拷贝结点，即在其该结点random指向的结点的下一位置
-        // 令原结点的拷贝结点指向该拷贝的random指向结点
+        // 为拷贝节点构造random指针
+        // 注意到：原节点random指向的节点的拷贝节点，即在其该节点random指向的节点的下一位置
+        // 令原节点的拷贝节点的random指针指向其random指向节点的拷贝节点
         for (RandomListNode *cur = head; cur != nullptr;)
         {
             if (cur->random != nullptr)
                 cur->next->random = cur->random->next;
-            cur = cur->next->next; // cur跳过自己的拷贝结点(cur的下一位置)
+            cur = cur->next->next; // cur跳过自己的拷贝节点(cur的下一位置)
         }
 
         // 分拆两个链表

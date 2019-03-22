@@ -11,9 +11,10 @@ class Solution
         if (nums.size() < 3)
             return result;
         sort(nums.begin(), nums.end());
+
         const int target = 0;
         auto last = nums.end();
-        for (auto i = nums.begin(); i < last - 2; ++i)
+        for (auto i = nums.begin(); i < last - 2; ++i)  // i后面留两个位置：last-2和last-1
         {
             auto j = i + 1;
             if (i > nums.begin() && *i == *(i - 1))

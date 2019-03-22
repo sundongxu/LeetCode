@@ -19,7 +19,7 @@ class Solution
         int first = 0, last = nums.size();
         while (first != last)
         {
-            int mid = first + (last - first) / 2; // 二分查找关键
+            int mid = (first + last) / 2; // 二分查找关键
             if (nums[mid] == target)
                 return mid;
             if (nums[first] <= nums[mid]) // 说明从first到mid是升序排列的

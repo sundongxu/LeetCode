@@ -3,32 +3,32 @@
 class Solution
 {
   public:
-    void sortColors(vector<int> &A)
+    void sortColors(vector<int> &nums)
     {
         int counts[3] = {0}; // 记录每个颜色出现的次数
-        for (int i = 0; i < A.size(); i++)
-            counts[A[i]]++;
+        for (int i = 0; i < nums.size(); i++)
+            counts[nums[i]]++;
         for (int i = 0, index = 0; i < 3; i++)
             for (int j = 0; j < counts[i]; j++)
-                A[index++] = i; // index为当前插入的位置
+                nums[index++] = i; // index为当前插入的位置
     }
 };
 
-// 双指针法
+// 双指针夹逼法
 // 由于只有三个颜色，可以设置两个index作指针，一个是red的index，一个是blue的index
 // 两边往中间走，时间复杂度O(n)，空间复杂度O(1)
 class Solution
 {
   public:
-    void sortColors(vector<int> &A)
+    void sortColors(vector<int> &nums)
     {
-        int red = 0, blue = A.size() - 1;
-        for (int i = 0; i < blue + 1;)
+        int red = 0, blue = nums.size() - 1;
+        for (int i = 0; i < blue + 1;) // i碰到blue就结束
         {
-            if (A[i] == 0)
-                swap(A[i++], A[red++]);
-            else if (A[i] == 2)
-                swap(A[i], A[blue--]);
+            if (nums[i] == 0)
+                swap(nums[i++], nums[red++]);
+            else if (nums[i] == 2)
+                swap(nums[i], nums[blue--]);
             else
                 i++;
         }

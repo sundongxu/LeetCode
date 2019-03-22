@@ -23,10 +23,10 @@ class Solution
         if (root->left == nullptr)
             return;
         // 三方合并，将左子树所形成的链表插入到root和root->right之间
-        TreeNode *p = root->left;
-        while (p->right)
-            p = p->right;
-        p->right = root->right;
+        TreeNode *node = root->left;
+        while (node->right)
+            node = node->right;
+        node->right = root->right;
         root->right = root->left;
         root->left = nullptr;
     }
@@ -69,15 +69,15 @@ class Solution
         s.push(root);
         while (!s.empty())
         {
-            auto p = s.top();
+            auto node = s.top();
             s.pop();
-            if (p->right)
-                s.push(p->right);
-            if (p->left)
-                s.push(p->left);
-            p->left = nullptr;
+            if (node->right)
+                s.push(node->right);
+            if (node->left)
+                s.push(node->left);
+            node->left = nullptr;
             if (!s.empty())
-                p->right = s.top();
+                node->right = s.top();
         }
     }
 };

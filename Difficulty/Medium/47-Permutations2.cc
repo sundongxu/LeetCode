@@ -37,7 +37,7 @@ class Solution
         // 扩展状态
         for (auto i = first; i != last; i++)
         {
-            int count = 0; // 统计 *i 在p中出现过多少次
+            int count = 0; // 统计字符 *i 在p中出现过多少次
             for (auto j = p.begin(); j != p.end(); j++)
             {
                 if (i->first == *j)

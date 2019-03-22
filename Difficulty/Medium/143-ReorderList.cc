@@ -39,6 +39,7 @@ class Solution
         cur->next = slow;
     }
 
+    // 反转单链表
     ListNode *reverse(ListNode *head)
     {
         if (head == nullptr || head->next == nullptr)
@@ -49,6 +50,6 @@ class Solution
             cur->next = prev;
 
         head->next = nullptr;
-        return prev;
+        return prev;  // 现在成为了反转链表的头节点，实际是原链表的尾结点
     }
 };

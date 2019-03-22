@@ -13,7 +13,6 @@ class Solution
     ListNode *insertionSortList(ListNode *head)
     {
         ListNode dummy(INT_MIN);
-        // dummy.next = head;
 
         for (ListNode *cur = head; cur != nullptr;)
         {
@@ -26,6 +25,7 @@ class Solution
         return dummy.next;
     }
 
+    // 新节点元素值为x，在已有链表中从前往后找到第一个比它大的节点，插入在该节点cur之前，即节点pre之后
     ListNode *findInsertPos(ListNode *head, int x)
     {
         ListNode *pre = nullptr;

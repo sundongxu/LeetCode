@@ -28,7 +28,7 @@ class Solution
             return; // 剪枝
 
         int num = 0;
-        for (int i = start; i < start + 3; i++)
+        for (int i = start; i < start + 3; i++)  // 最多3位字符
         {
             num = num * 10 + (s[i] - '0');
 

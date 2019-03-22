@@ -9,6 +9,7 @@
 class Solution
 {
   public:
+    // 解法1：遇到n = INT_MIN时会出问题
     double myPow(double x, int n)
     {
         if (n < 0)
@@ -28,5 +29,16 @@ class Solution
             return v * v * x;
         else
             return v * v;
+    }
+
+    double myPow(double x, int n)
+    {
+        if (n == 0)
+            return 1;
+        double t = pow(x, n / 2);
+        if (n % 2)
+            return n < 0 ? 1 / x * t * t : x * t * t;
+        else
+            return t * t;
     }
 };

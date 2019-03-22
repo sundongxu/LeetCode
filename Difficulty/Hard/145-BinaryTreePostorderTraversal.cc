@@ -44,31 +44,31 @@ class Solution
             return result;
 
         stack<pair<TreeNode *, char>> s;
-        TreeNode *p = root;
+        TreeNode *node = root;
 
         do
         {
-            while (p != nullptr)
+            while (node != nullptr)
             {
-                s.push(make_pair(p, 'L'));
-                p = p->left;
+                s.push(make_pair(node, 'L'));
+                node = node->left;
             }
             bool shouldContinue = true;
             while (shouldContinue && !s.empty())
             {
-                auto pair_top = s.top();
+                auto pair = s.top();
                 s.pop();
-                p = pair_top.first;
-                switch (pair_top.second)
+                node = pair.first;
+                switch (pair.second)
                 {
                 case 'L':
-                    pair_top.second = 'R';
-                    s.push(pair_top);
+                    pair.second = 'R';
+                    s.push(pair);
                     shouldContinue = false;
-                    p = p->right;
+                    node = node->right;
                     break;
                 case 'R':
-                    result.push_back(pair_top.first->val);
+                    result.push_back(pair.first->val);
                     break;
                 }
             }

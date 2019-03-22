@@ -3,10 +3,10 @@ class Solution
   public:
     int findMin(vector<int> &nums)
     {
-        int first = 0, last = nums.size();
+        int first = 0, last = nums.size(); // 最后一个可取值的下一个位置
         while (first != last)
         {
-            int mid = first + (last - first) / 2;
+            int mid = (first + last) / 2;
             if (nums[first] > nums[mid])
             {
                 // 说明最小值只可能出现在first和mid之间
@@ -14,7 +14,7 @@ class Solution
                 // 故区间为[first+1, mid]，注意区间表示为[first, last)
                 // first = first + 1
                 // last = mid + 1
-                first++;
+                first++; // 最小肯定不是first
                 last = mid + 1;
             }
             else if (nums[mid] > nums[last - 1])
@@ -26,7 +26,7 @@ class Solution
                 first = mid + 1;
             }
             else
-            // nums[first] < nums[mid] < nums[last-1]
+            // nums[first] <= nums[mid] <= nums[last-1]
             // 此情况发生时，整个数组严格有序，那么最小的直接就是nums[first]
             {
                 return nums[first];

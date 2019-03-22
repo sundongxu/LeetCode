@@ -21,15 +21,15 @@ class Solution
         // total为当轮循环中wordList中与当前词current仅相差一个字母的单词个数
         // remain为队列当前剩余元素个数
         // level为遍历层数，最后某次循环中出队找到一个current == endWord，则最短路径 = 遍历层次数 + 1
-        int min = 0, total = 0, remain = 1, level = 0;
+        int minPathLen = 0, total = 0, remain = 1, level = 0;
         queue<string> q;
         q.push(beginWord);
         while (!q.empty())
         {
-            string current = q.front();
-            if (current == endWord)
+            string cur = q.front();
+            if (cur == endWord)
             {
-                min = ++level;
+                minPathLen = ++level;
                 break;
             }
             --remain; // 出队，队列元素个数减一
@@ -39,22 +39,22 @@ class Solution
                 for (long i = wordList.size() - 1; i >= 0; --i)
                 {
                     // 从尾到头找与当前词current仅相差一位的单词
-                    if (oneDiff(wordList[i], current))
+                    if (oneDiff(wordList[i], cur))
                     {
                         q.push(wordList[i]);
-                        ++total; //
+                        ++total; // 与cur相差一个字母的单词计数
                         wordList.erase(wordList.begin() + i);
                     }
                 }
             }
-            if (!remain && total > 0)
+            if (remain == 0 && total > 0)
             {
                 ++level;        // 本轮循环结束，遍历层数加一
                 remain = total; // 本轮循环中又新入队了total个单词，remain计数队列元素个数
                 total = 0;      // 本轮循环结束，复位
             }
         }
-        return min;
+        return minPathLen;
     }
 };
 

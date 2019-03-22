@@ -23,12 +23,16 @@ class Solution
             return;
         }
 
+        int prev = -1;
         for (int i = start; i < candidates.size(); ++i)
         {
+            if (prev == candidates[i])
+                continue;
+            prev = candidates[i];
             if (gap < candidates[i])
                 return;
             path.push_back(candidates[i]);
-            dfs(result, path, candidates, gap - candidates[i], i);
+            dfs(result, path, candidates, gap - candidates[i], i + 1);  // 不取当前数的重复
             path.pop_back();
         }
     }

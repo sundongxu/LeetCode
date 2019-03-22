@@ -16,7 +16,7 @@ class Solution
   private:
     static unsigned int binary_to_gray(unsigned int n)
     {
-        return n ^ (n >> 1);
+        return n ^ (n >> 1);  // 可以去掉n最右边bit位上的1
     }
 };
 

@@ -7,8 +7,8 @@
     如果一个排列不是完全的降序排列，要找它的下一个排列，可以这样找：
     从右往左遍历，一定可找到一个位置i，使得其右边的元素比它大，即nums[i] < nums[i+1]
     那么元素nums[i]一定是要被交换的一个元素，下面在i的右边找一个比它大，但是却是i右边子序列里面最小的数
-    即在位置i右边找一个刚好比nums[i]的数，找到该位置j，交换元素nums[i]和nums[j]
-    但是此时i右边子序列原本就是降序排列的，现在改大了位置i的元素值，
+    即在位置i右边找一个刚好（仅）比nums[i]大的数，找到该位置j，交换元素nums[i]和nums[j]
+    此外，由于i右边子序列原本就是降序排列的，现在只是改大了位置i的元素值，显然变换还没有完成，因为变换前后的两个排列之间肯定还有其它排列
     则按字母序的下一个排列应该将位置i右边的子序列变为升序排列(子序列中最小的排列即升序排列)
  */
 class Solution
@@ -17,16 +17,18 @@ class Solution
     void nextPermutation(vector<int> &nums)
     {
         int i = nums.size() - 2;
-        while (i >= 0 && nums[i + 1] <= nums[i]) // 从右往左遍历
+        while (i >= 0 && nums[i + 1] <= nums[i]) // 从右往左遍历，找到第一个数，它右边的数比它自身大
             i--;
         if (i >= 0)
         {
+            // 在i右边的序列中找到将将比i大的数
+            // i右边的数一定从左向右严格递减，不然i就在i的右边序列里了，故nums[i+1]一定是i右边最大的，自右向左找到第一个比nums[i]大的就是要找的数nums[j]
             int j = nums.size() - 1;
             while (j >= 0 && nums[j] <= nums[i]) // 从右往左找到i右边比nums[i]大且最小的元素nums[j]
                 j--;
             swap(nums[i], nums[j]);
         }
-        reverse(nums.begin() + i + 1, nums.end());
+        reverse(nums.begin() + i + 1, nums.end()); // 1532 -> 2135，从5开始都是降序，则从5开始的序列逆序翻转
         // 也能处理
     }
 };

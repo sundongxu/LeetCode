@@ -15,11 +15,11 @@
 // else f[i][j] = max(f[i+1][j-1], f[i][j-1], f[i+1][j])
 
 // 法三：动态规划，复杂度O(n^2)，设状态为f(i,j)，表示区间[i,j]是否为回文串
-// if 子串　ｓ[i],...,s[j] 为一个回文串，则f(i,j) = true
+// if 子串　s[i],...,s[j] 为一个回文串，则f(i,j) = true
 // else f(i,j) = false
 // 而已知：f(i,i) = true，和f(i,i+1) = (s[i] == s[i+1])
 // 则状态转移方程如下：
-// f(i,j) = true，条件为i=j，或(s[i]==s[j] && i-j<2)，或(s[i]==s[j] && f(i+1, j-1))
+// f(i,j) = true，条件为i=j，或(s[i]==s[j] && j-i<2)，或(s[i]==s[j] && f(i+1, j-1))
 // 不满足上述条件则f(i,j) = false
 class Solution
 {

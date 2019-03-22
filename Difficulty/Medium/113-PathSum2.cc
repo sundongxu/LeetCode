@@ -10,28 +10,28 @@
 class Solution
 {
   public:
-    vector<vector<int>> pathSum(TreeNode *root, int sum)
+    vector<vector<int>> dfs(TreeNode *root, int sum)
     {
         vector<vector<int>> result;
-        vector<int> cur; // 当前路径
-        pathSum(root, sum, cur, result);
+        vector<int> path; // 当前路径
+        dfs(root, sum, path, result);
         return result;
     }
 
   private:
-    void pathSum(TreeNode *root, int gap, vector<int> &cur, vector<vector<int>> &result)
+    void dfs(TreeNode *root, int gap, vector<int> &path, vector<vector<int>> &result)
     {
         if (root == nullptr)
             return;
 
-        cur.push_back(root->val);
+        path.push_back(root->val);
 
-        if (root->left == nullptr && root->right == nullptr)
+        if (root->left == nullptr && root->right == nullptr)  // 已经是叶子，路径到底了
             if (gap == root->val)
-                result.push_back(cur);
+                result.push_back(path);
 
-        pathSum(root->left, gap - root->val, cur, result);
-        pathSum(root->right, gap - root->val, cur, result);
-        cur.pop_back();
+        dfs(root->left, gap - root->val, path, result);
+        dfs(root->right, gap - root->val, path, result);
+        path.pop_back();
     }
 };

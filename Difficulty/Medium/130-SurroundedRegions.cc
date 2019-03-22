@@ -5,24 +5,24 @@ class Solution
     {
         if (board.empty())
             return;
-        int r = board.size(), c = board[0].size();
-        for (int i = 0; i < r; i++)
+        int m = board.size(), n = board[0].size();
+        for (int i = 0; i < m; i++)
         {
             if (board[i][0] == 'O')
                 mark(i, 0, board);
-            if (board[i][c - 1] == 'O')
-                mark(i, c - 1, board);
+            if (board[i][n - 1] == 'O')
+                mark(i, n - 1, board);
         }
-        for (int j = 1; j < c - 1; j++)
+        for (int j = 1; j < n - 1; j++)
         {
             if (board[0][j] == 'O')
                 mark(0, j, board);
-            if (board[r - 1][j] == 'O')
-                mark(r - 1, j, board);
+            if (board[m - 1][j] == 'O')
+                mark(m - 1, j, board);
         }
-        for (int i = 0; i < r; i++)
+        for (int i = 0; i < m; i++)
         {
-            for (int j = 0; j < c; j++)
+            for (int j = 0; j < n; j++)
             {
                 if (board[i][j] == '#')
                     board[i][j] = 'O';

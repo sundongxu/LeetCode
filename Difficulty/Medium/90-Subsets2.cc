@@ -4,26 +4,26 @@
 class Solution
 {
   public:
-    vector<vector<int>> subsetsWithDup(vector<int> &S)
+    vector<vector<int>> subsetsWithDup(vector<int> &nums)
     {
-        sort(S.begin(), S.end()); // 必须排序
+        sort(nums.begin(), nums.end()); // 必须排序
         vector<vector<int>> result;
         vector<int> path;
-        dfs(S, S.begin(), path, result);
+        dfs(nums, nums.begin(), path, result);
         return result;
     }
 
   private:
-    static void dfs(const vector<int> &S, vector<int>::iterator start,
+    static void dfs(const vector<int> &nums, vector<int>::iterator start,
                     vector<int> &path, vector<vector<int>> &result)
     {
         result.push_back(path);
-        for (auto i = start; i < S.end(); i++)
+        for (auto i = start; i < nums.end(); i++)
         {
             if (i != start && *i == *(i - 1))
                 continue;
             path.push_back(*i);
-            dfs(S, i + 1, path, result);
+            dfs(nums, i + 1, path, result);
             path.pop_back();
         }
     }
@@ -34,24 +34,24 @@ class Solution
 class Solution
 {
   public:
-    vector<vector<int>> subsetsWithDup(vector<int> &S)
+    vector<vector<int>> subsetsWithDup(vector<int> &nums)
     {
         vector<vector<int>> result;
-        sort(S.begin(), S.end());
-        vector<int> count(S.back() - S.front() + 1, 0);
+        sort(nums.begin(), nums.end());
+        vector<int> count(nums.back() - nums.front() + 1, 0);
         // 计算所有元素的个数
-        for (auto i : S)
+        for (auto i : nums)
         {
-            count[i - S[0]]++;
+            count[i - nums[0]]++;
         }
         // 每个元素选择了多少个
-        vector<int> selected(S.back() - S.front() + 1, -1);
-        subsets(S, count, selected, 0, result);
+        vector<int> selected(nums.back() - nums.front() + 1, -1);
+        subsets(nums, count, selected, 0, result);
         return result;
     }
 
   private:
-    static void subsets(const vector<int> &S, vector<int> &count,
+    static void subsets(const vector<int> &nums, vector<int> &count,
                         vector<int> &selected, size_t step, vector<vector<int>> &result)
     {
         if (step == count.size())
@@ -61,7 +61,7 @@ class Solution
             {
                 for (int j = 0; j < selected[i]; j++)
                 {
-                    subset.push_back(i + S[0]);
+                    subset.push_back(i + nums[0]);
                 }
             }
             result.push_back(subset);
@@ -70,7 +70,7 @@ class Solution
         for (int i = 0; i <= count[step]; i++)
         {
             selected[step] = i;
-            subsets(S, count, selected, step + 1, result);
+            subsets(nums, count, selected, step + 1, result);
         }
     }
 };

@@ -17,13 +17,14 @@ class Solution
                     return false;
         }
 
+        // 检查九宫格
         for (int r = 0; r < 3; r++)
         {
             for (int c = 0; c < 3; c++)
             {
                 fill(used, used + 9, false);
                 for (int i = r * 3; i < r * 3 + 3; i++)
-                    for (itn j = c * 3; j < c * 3 + 3; j++)
+                    for (int j = c * 3; j < c * 3 + 3; j++)
                         if (!check(board[i][j], used))
                             return false;
             }

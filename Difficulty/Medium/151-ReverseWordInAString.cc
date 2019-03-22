@@ -1,8 +1,8 @@
 class Solution
 {
   public:
-    // function to reverse any part of string from i to j (just one word or entire string)
-    void reverseword(string &s, int i, int j)
+    // 反转字符串i到j位，都是闭区间
+    void reverseWord(string &s, int i, int j)
     {
         while (i < j)
         {
@@ -21,6 +21,7 @@ class Solution
 
         while (1)
         {
+            // 一轮循环完成一个单词的反转
             while (i < len && s[i] == ' ')
                 i++; // 跳过单词开头的空格
             if (i == len)
@@ -29,16 +30,12 @@ class Solution
                 s[j++] = ' ';
             l = j;
             while (i < len && s[i] != ' ')
-            {
-                s[j] = s[i];
-                j++;
-                i++;
-            }
-            reverseword(s, l, j - 1); // reverse word in place
+                s[j++] = s[i++];
+            reverseWord(s, l, j - 1); // 就地反转当前单词，左边界l，右边界j-1
             wordcount++;
         }
 
-        s.resize(j);              // resize result string
-        reverseword(s, 0, j - 1); // reverse whole string
+        s.resize(j);
+        reverseWord(s, 0, j - 1); // 最后反转整个字符串
     }
 };

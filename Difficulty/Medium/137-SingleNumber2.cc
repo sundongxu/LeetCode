@@ -21,7 +21,7 @@ class Solution
         int result = 0;
         for (int i = 0; i < W; i++)
         {
-            result += (count[i] << i);
+            result += (count[i] << i);  // 因为最后只剩一个数，所以count[i]要么为0，要么为1
         }
         return result;
     }

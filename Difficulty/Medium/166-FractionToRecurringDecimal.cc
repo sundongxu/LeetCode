@@ -45,7 +45,7 @@ class Solution
 
             r *= 10;
 
-            // 追加10的r除以d的商到结果字符串
+            // 追加10倍r除以d的商到结果字符串
             res += to_string(r / d);
         }
 

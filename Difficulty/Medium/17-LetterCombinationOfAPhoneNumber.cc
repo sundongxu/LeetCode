@@ -8,8 +8,8 @@ class Solution
   public:
     const vector<string> keyboard{
         "", "", "abc", // 0、 1 、2
-        "def", "ghi", "jkl", "mno",
-        "pqrs", "tuv", "wxyz"};
+        "def", "ghi", "jkl", "mno", // 3、4、5、6
+        "pqrs", "tuv", "wxyz"};  // 7、8、9
 
     vector<string> letterCombinations(string digits)
     {
