@@ -5,7 +5,7 @@ int lengthOfLastWord(string s)
     int length = 0;
     while (i >= 0 && s[i] == ' ')
         --i; // 退到最后一个不是空格的字符
-    // 从最后一个不是字符的位置向前遍历，直到遇到下一个空格，表示最后一个单词已结束
+    // 从最后一个字符的位置向前遍历，直到遇到下一个空格，表示最后一个单词已结束
     while (i >= 0 && s[i--] != ' ')
         ++length;
     return length;

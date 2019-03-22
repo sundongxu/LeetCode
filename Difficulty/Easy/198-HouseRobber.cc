@@ -17,14 +17,14 @@ class Solution
     {
         if (nums.size() == 0)
             return 0;
-        int len = nums.size();
-        vector<int> f(len + 1, 0);
+        int n = nums.size();
+        vector<int> f(n + 1, 0);
         f[0] = 0;
         f[1] = nums[0];
 
-        for (int i = 2; i <= len; i++)
+        for (int i = 2; i <= n; i++)
             f[i] = max(f[i - 1], f[i - 2] + nums[i - 1]);
-        return f[len];
+        return f[n];
     }
 };
 
@@ -40,13 +40,13 @@ class Solution
     {
         if (nums.size() == 0)
             return 0;
-        int len = nums.size();
+        int n = nums.size();
         vector<int> f(3, 0);
         f[0] = 0;
         f[1] = nums[0];
 
-        for (int i = 2; i <= len; i++)
+        for (int i = 2; i <= n; i++)
             f[i % 2] = max(f[(i - 1) % 2], f[(i - 2) % 2] + nums[i - 1]);
-        return f[len % 2];
+        return f[n % 2];
     }
 };

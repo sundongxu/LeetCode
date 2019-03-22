@@ -23,17 +23,17 @@ class Solution
   public:
     vector<int> twoSum(vector<int> &nums, int target)
     {
-        unordered_map<int, int> mapping;
+        unordered_map<int, int> map;
         vector<int> result;
         for (int i = 0; i < nums.size(); i++)
-            mapping[nums[i]] = i; // 用哈希表存储每个数对应下标
+            map[nums[i]] = i; // 用哈希表存储每个数对应下标
         for (int i = 0; i < nums.size(); i++)
         {
             const int gap = target - nums[i];
-            if (mapping.find(gap) != mapping.end() && mapping[gap] > i)
+            if (map.find(gap) != map.end() && map[gap] > i)
             {
                 result.push_back(i);
-                result.push_back(mapping[gap]);
+                result.push_back(map[gap]);
                 break;
             }
         }

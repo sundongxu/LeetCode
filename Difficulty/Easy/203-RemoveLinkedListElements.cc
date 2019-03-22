@@ -13,39 +13,39 @@ class Solution
   public:
     ListNode *removeElements(ListNode *head, int val)
     {
-        struct ListNode *current = head;
+        struct ListNode *cur = head;
         struct ListNode *prev = nullptr;
 
         if (head == nullptr)
             return nullptr;
 
-        while (current)
+        while (cur)
         {
-            if (current->val == val)
+            if (cur->val == val)
             {
                 if (prev)
                 {
                     // 要删除current
-                    ListNode *nodeToDel = current;
-                    prev->next = current->next;
-                    // nodeToDel->next = nullptr;
-                    delete nodeToDel;
-                    nodeToDel = nullptr;
+                    ListNode *tmp = cur;
+                    prev->next = cur->next;
+                    // tmp->next = nullptr;
+                    delete tmp;
+                    tmp = nullptr;
                 }
                 else
                 {
-                    ListNode *nodeToDel = head;
+                    ListNode *tmp = head;
                     head = head->next; // 删除头结点
-                    // nodeToDel->next = nullptr;
-                    delete nodeToDel;
-                    nodeToDel = nullptr;
+                    // tmp->next = nullptr;
+                    delete tmp;
+                    tmp = nullptr;
                 }
             }
             else
             {
-                prev = current;
+                prev = cur;
             }
-            current = current->next;
+            cur = cur->next;
         }
         return head;
     }

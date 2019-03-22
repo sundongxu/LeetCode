@@ -17,9 +17,9 @@ class Solution
     int titleToNumber(string s)
     {
         int i = 0, sum = 0;
-        for (; i < s.size(); i++)
-            sum = sum + pow(26, s.size() - i - 1) * (s[i] - 'A' + 1);
-        return sum;
+        // for (; i < s.size(); i++)
+        //     sum = sum + pow(26, s.size() - i - 1) * (s[i] - 'A' + 1);
+        // return sum;
 
         for (i = 0; i < s.size(); i++)
             sum += pow(26, s.size() - i - 1) * (s[i] - 'A' + 1);

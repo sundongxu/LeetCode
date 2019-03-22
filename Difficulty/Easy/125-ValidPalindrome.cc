@@ -46,7 +46,7 @@ class Solution
                 r++;
                 continue;
             }
-            if((s[l] | 0x20) != (s[r] | 0x20))
+            if((s[l] | 0x20) != (s[r] | 0x20))  // 0x20是空格
                 return false;
             l++;
             r--;

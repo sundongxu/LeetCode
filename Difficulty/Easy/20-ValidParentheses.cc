@@ -15,8 +15,8 @@ class Solution
         for (auto c : s)
             if (left.find(c) != string::npos) // 在left中能找到c，即c是左括号
                 stk.push(c);
-            else                                                     // c不是左括号，即c是右括号
-                if (stk.empty() || stk.top() != left[right.find(c)]) // 栈为空或栈顶元素不是对应当前右括号的左括号
+            else if (stk.empty() || stk.top() != left[right.find(c)]) // c不是左括号，即c是右括号
+                // 栈为空或栈顶元素不是对应当前右括号的左括号
                 return false;
             else
                 stk.pop();
