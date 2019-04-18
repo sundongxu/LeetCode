@@ -16,7 +16,7 @@ class Solution
             map[n]++;
 
         vector<int> res;
-        priority_queue<pair<int, int>> pq;
+        priority_queue<pair<int, int>> pq; // 默认是最大堆，比较函数是less
         for (auto it = map.begin(); it != map.end(); it++)
         {
             // 队列里面存的是一个pair，但是第一个元素是数字的出现次数，第二个元素才是数字自身
@@ -42,8 +42,8 @@ class Solution
     {
         unordered_map<int, int> map;
         priority_queue<int, vector<int>, greater<int>> minHeap; // 最小堆
-        for (auto i : nums)
-            ++map[i];
+        for (auto n : nums)
+            map[n]++;
         for (auto &i : map)
         {
             minHeap.push(i.second);

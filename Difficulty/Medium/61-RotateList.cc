@@ -26,9 +26,7 @@ class Solution
         p->next = head; //首尾相连，成环
 
         for (int step = 0; step < k; step++)
-        {
-            p = p->next; // 接着往后跑
-        }
+            p = p->next;   // 接着往后跑
         head = p->next;    // 新的首结点
         p->next = nullptr; // 断开环
         return head;

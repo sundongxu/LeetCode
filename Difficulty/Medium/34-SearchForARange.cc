@@ -79,7 +79,7 @@ class Solution
 //         {
 //             auto mid = next(first, distance(first, last) / 2);
 //             if (value >= *mid)
-//                 first = ++mid; // ̽ lower_bound ϴₓ̼ऻ
+//                 first = ++mid;
 //             else
 //                 last = mid;
 //         }

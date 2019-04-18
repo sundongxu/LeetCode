@@ -31,6 +31,7 @@ class Solution
             return v * v;
     }
 
+    // 解法2
     double myPow(double x, int n)
     {
         if (n == 0)

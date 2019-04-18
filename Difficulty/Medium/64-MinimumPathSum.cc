@@ -1,12 +1,13 @@
 /*  
     又是动态规划！
     自己完成的第二道DP问题哈哈哈，还优化了空间(原方法是用)
-    状态转移方程：f(i,j) = min(f(i-1,j), f(i,j-1)) + (i,j)
+    状态转移方程：f(i,j) = min(f(i-1,j), f(i,j-1)) + grid(i,j)
  */
 
 class Solution
 {
   public:
+    // 直接复用grid空间，动规思想依次将grid元素值更改为到该点的最小路径和
     int minPathSum(vector<vector<int>> &grid)
     {
         // 边界条件，判空
@@ -42,7 +43,7 @@ class Solution
     {
         const int m = grid.size();
         const int n = grid[0].size();
-        int f[n];
+        int f[n];                // 第i个元素对应当前行的第i列
         fill(f, f + n, INT_MAX); // 初始值是INT_MAX，因为后面用了min
         f[0] = 0;
         for (int i = 0; i < m; i++)
@@ -50,8 +51,11 @@ class Solution
             f[0] += grid[i][0];
             for (int j = 1; j < n; j++)
             {
-                // 右边的f[j]，表示更新后的f[j]，与公式中的f[i][j]对应
+                // 左边的f[j]，表示更新后的f[j]，与公式中的f[i][j]对应
                 // 右边的f[j]，表示老的f[j]，与公式中的f[i-1][j]对应
+                // f[j - 1] 代表到达[i, j-1]时的最小路径和
+                // 左边的f[j] 代表到达[i, j]时的最小路径和
+                // 右边的f[j] 代表到达[i-1, j]时的最小路径和
                 f[j] = min(f[j - 1], f[j]) + grid[i][j];
             }
         }

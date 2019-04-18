@@ -8,7 +8,7 @@
 class Solution
 {
   public:
-    vector<vector<int>> dfs(vector<int> &nums)
+    vector<vector<int>> subsets(vector<int> &nums)
     {
         sort(nums.begin(), nums.end()); // 输出有序
         vector<vector<int>> result;
@@ -19,7 +19,7 @@ class Solution
 
   private:
     static void dfs(const vector<int> &nums, vector<int> &path, int cur,
-                        vector<vector<int>> &result)
+                    vector<vector<int>> &result)
     {
         if (cur == nums.size())
         {
@@ -40,7 +40,7 @@ class Solution
 class Solution
 {
   public:
-    vector<vector<int>> dfs(vector<int> &nums)
+    vector<vector<int>> subsets(vector<int> &nums)
     {
         sort(nums.begin(), nums.end()); // 输出有序
         vector<vector<int>> result;
@@ -51,7 +51,7 @@ class Solution
 
   private:
     static void dfs(const vector<int> &nums, vector<bool> &selected, int cur,
-                        vector<vector<int>> &result)
+                    vector<vector<int>> &result)
     {
         if (cur == nums.size())
         {
@@ -78,7 +78,7 @@ class Solution
 class Solution
 {
   public:
-    vector<vector<int>> dfs(vector<int> &nums)
+    vector<vector<int>> subsets(vector<int> &nums)
     {
         sort(nums.begin(), nums.end());
         vector<vector<int>> result(1); // 初始化有一个空的vector:[]
@@ -102,7 +102,7 @@ class Solution
 class Solution
 {
   public:
-    vector<vector<int>> dfs(vector<int> &nums)
+    vector<vector<int>> subsets(vector<int> &nums)
     {
         sort(nums.begin(), nums.end());
         vector<vector<int>> result;

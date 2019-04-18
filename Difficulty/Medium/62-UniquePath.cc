@@ -14,10 +14,10 @@ class Solution
         if (m == 1 && n == 1) // 收敛条件
             return 1;
 
-        for (int i = 0; i < m; i++)
+        for (int i = 0; i < m; i++) // 第一列全为1，只有一种走法
             f[i][0] = 1;
 
-        for (int j = 1; j < n; j++)
+        for (int j = 1; j < n; j++) // 第一行全为1，只有一种走法
             f[0][j] = 1;
 
         for (int i = 1; i < m; i++)

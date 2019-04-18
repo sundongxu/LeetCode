@@ -34,3 +34,43 @@ class Solution
         return minHeap.top(); // 但是堆顶恰好是这前k个最大元素里面最小的，堆顶元素即第k大元素
     }
 };
+
+// 快排Partition的方法
+class Solution
+{
+  public:
+    int findKthLargest(vector<int> &nums, int k)
+    {
+        int n = nums.size();
+        findKthLargestHelp(nums, n - k, 0, n - 1);
+        return nums[n - k];
+    }
+
+    void findKthLargestHelp(vector<int> &nums, const int pos, int low, int high)
+    {
+        if (low < high)
+        {
+            int pivot = Partition(nums, low, high);
+            if (pivot == pos)
+                return;
+            else if (pivot < pos)
+                findKthLargestHelp(nums, pos, pivot + 1, high);
+            else
+                findKthLargestHelp(nums, pos, low, pivot - 1);
+        }
+    }
+
+    int Partition(vector<int> &nums, int low, int high)
+    {
+        while (low < high)
+        {
+            while (low < high && nums[low] <= nums[high])
+                high--;
+            swap(nums[low], nums[high]);
+            while (low < high && nums[low] <= nums[high])
+                low++;
+            swap(nums[low], nums[high]);
+        }
+        return low;
+    }
+};

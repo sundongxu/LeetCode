@@ -11,7 +11,7 @@
 // 这样待删除的结点就是它本身的下一个结点，包括next域也是下一个结点的next域
 // 这样原本的下一个结点就没有人指向，可以删除
 
-// 都不用删除结点空间
+// 这道题都不用删除结点空间
 class Solution
 {
   public:
@@ -27,9 +27,9 @@ class Solution
   public:
     void deleteNode(ListNode *node)
     {
-        ListNode *nodeToDel = node->next;
+        ListNode *tmp = node->next;
         *node = *node->next;
-        delete nodeToDel;
-        nodeToDel = nullptr;
+        delete tmp;
+        tmp = nullptr;
     }
 };
